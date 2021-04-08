@@ -1,15 +1,7 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "voorbeeld";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+include_once("scripts/functions.php");
+$pdo = mysqli_connect("localhost","root","","voorbeeld");
+  {
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,10 +17,13 @@ if ($conn->connect_error) {
 <!-- Navigation -->
 <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
-    <div class="w3-col s3">
+    <div class="w3-col s2">
       <a href="home.php" class="w3-button w3-block">Home</a>
     </div>
-		<div class="w3-col s3">
+		<div class="w3-col s2">
+      <a href="table.php" class="w3-button w3-block">Table</a>
+    </div>
+		<div class="w3-col s2">
       <a href="inloggen.php" class="w3-button w3-block">Inloggen</a>
     </div>
   </div>
@@ -37,7 +32,7 @@ if ($conn->connect_error) {
 <!-- Content -->
 <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
   <div class="w3-panel">
-
+    <h1><b>Voorbeeldheader</b></h1>
 	</div>
 </div>
 
@@ -46,5 +41,5 @@ if ($conn->connect_error) {
 </body>
 </html>
 <?php
-$conn->close();
+}
 ?>
