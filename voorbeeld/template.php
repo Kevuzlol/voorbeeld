@@ -21,10 +21,20 @@ $pdo = mysqli_connect("localhost","root","","voorbeeld");
       <a href="home.php" class="w3-button w3-block">Home</a>
     </div>
 		<div class="w3-col s2">
-      <a href="table.php" class="w3-button w3-block">Table</a>
+      <a href="table.php" class="w3-button w3-block">Crud</a>
     </div>
 		<div class="w3-col s2">
       <a href="inloggen.php" class="w3-button w3-block">Inloggen</a>
+    </div>
+		<div class="w3-col s2">
+      <div class="dropdown">
+				<button class="w3-button w3-block">Dropdown</button>
+				<div class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+			</div>
     </div>
   </div>
 </div>
